@@ -1,16 +1,35 @@
 # XDCR helper scripts in Python
 
+## List all cluster references
+
+The following example lists all set up XDCR remote clusters:
+
+```python
+import xdcrclient
+xdcrclient.list_remotes("http://192.168.7.188:8091", "couchbase", "couchbase")
+```
+The return value is an array of cluster references.
+
+```
+['5b039e49fbdec518548250a7900377b1:local->192.168.7.188:8091']
+```
+
+The format is:
+
+* ${Reference UUID}:${Reference name}->${Host name}
+
 ## List all replication tasks
 
-The following example lists you all XDCR replication tasks
+The following example lists you all XDCR replication tasks:
 
 ```python
 import xdcrclient
 xdcrclient.list("http://192.168.7.188:8091", "couchbase", "couchbase")
 ```
-The output is the XDCR replication id:
+
+The return value is an array of the XDCR replication id-s.
 ```
-5b039e49fbdec518548250a7900377b1/travel-sample/travel-sample-xdcr
+['5b039e49fbdec518548250a7900377b1/travel-sample/travel-sample-xdcr']
 ```
 Whereby the components are:
 
@@ -53,4 +72,3 @@ The components are:
 * The target bucket
 
 The '/' is HTML encoded in order to use the id directly in further REST calls.
-
