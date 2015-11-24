@@ -18,7 +18,7 @@ The format of such an entry is:
 
 * ${Reference UUID}:${Reference name}->${Host name}
 
-An cluster reference is identified by using the UUID. So the other stuff is just fyi.
+A cluster reference is identified by using the UUID. So the other stuff is just fyi.
 
 ## List all replication tasks
 
