@@ -52,5 +52,5 @@ The components are:
 * The source bucket
 * The target bucket
 
-The '/' was escaped by is HTML encoded in order to use the id directly in further REST calls.
+The '/' is HTML encoded in order to use the id directly in further REST calls.
 
