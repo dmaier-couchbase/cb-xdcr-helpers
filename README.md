@@ -74,3 +74,20 @@ The components of the replication id are:
 * The target bucket
 
 The '/' is HTML encoded in order to use the id directly in further REST calls.
+
+
+## Retrieve statistics
+
+The following example retrieves the completeness statistic for the 'travel-sample' bucket:
+
+```
+import xdcrclient
+id = xdcrclient.link_id("http://192.168.7.188:8091", "couchbase", "couchbase", "travel-sample", "travel-sample-xdcr", "local")
+xdcrclient.ret_stat("http://192.168.7.188:8091", "couchbase", "couchbase", "travel-sample", id, "percent_completeness")
+```
+
+The result is in my case:
+
+```
+100.0
+```
