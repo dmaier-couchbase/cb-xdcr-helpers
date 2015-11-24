@@ -14,7 +14,7 @@ The return value is an array of cluster references.
 ['5b039e49fbdec518548250a7900377b1:local->192.168.7.188:8091']
 ```
 
-The format is:
+The format of such an entry is:
 
 * ${Reference UUID}:${Reference name}->${Host name}
 
@@ -31,7 +31,7 @@ The return value is an array of the XDCR replication id-s.
 ```
 ['5b039e49fbdec518548250a7900377b1/travel-sample/travel-sample-xdcr']
 ```
-Whereby the components are:
+Whereby the components of such an entry are:
 
 * The UUID of the cluster reference
 * The source bucket 
@@ -53,7 +53,7 @@ The return value is:
 
 ## Build a XDCR replication id from the name
 
-The following example shows how to create the 
+The following example shows how to create the replication id from the source bucket name, the target bucket name and the remote cluster reference name:
 
 ```python
 import xdcrclient
@@ -65,7 +65,7 @@ The return value is the XDCR replication id
 '5b039e49fbdec518548250a7900377b1%2Fb_source%2Fb_target'
 ```
 
-The components are:
+The components of the replication id are:
 
 * The UUID of the cluster reference
 * The source bucket
